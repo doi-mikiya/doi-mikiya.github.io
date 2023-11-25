@@ -1,32 +1,58 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* 全体のボックスサイジングを設定 */
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
-header, nav, main, footer {
+/* コンテナをフレックスボックスにする */
+.container {
+    display: flex;
+    flex-wrap: nowrap; /* フレックスアイテムが折り返さないようにする */
+}
+
+/* サイドバーのスタイリング */
+#sidebar {
+    width: 250px; /* サイドバーの幅 */
+    background-color: #f2f2f2; /* サイドバーの背景色 */
     padding: 20px;
-    text-align: center;
+    height: 140vh; /* ビューポートの高さに合わせる */
+    overflow-y: auto;
+    flex-shrink: 0; /* サイドバーが縮小しないようにする */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+header {
+    display: flex; /* フレックスボックスを有効化 */
+    align-items: center; /* アイテムを垂直方向の中央に配置 */
+}
+h1 {
+    margin-right: 400px; /* h1の右に余白を追加 */
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+/* メインコンテンツのスタイリング */
+.content {
+    flex-grow: 1; /* 残りのスペースをメインコンテンツが取るようにする */
+    padding: 20px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
+/* 以下、既存のスタイルを追加・調整 */
+
+/* レスポンシブデザインのためのメディアクエリ */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 画面が小さくなったら縦並びに変更 */
+    }
+
+    #sidebar {
+        width: 100%; /* サイドバーの幅を画面幅いっぱいにする */
+        height: auto; /* 高さを自動調整にする */
+    }
+
+    .content {
+        flex-grow: 0; /* メインコンテンツの成長を無効にする */
+    }
 }
 
 footer {
     background-color: #f3f3f3;
     color: #333;
+    font-weight:bold;
 }
-

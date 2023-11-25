@@ -3,32 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホームページ作成テスト</title>
+    <title>Personal WebPage Mikiya Doi</title>
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16"/>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <header>
-        <h1>ホームページ作成テスト</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">aaa</a></li>
-            <li><a href="#">bbb</a></li>
-            <li><a href="#">ccc</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>セクション1</h2>
-            <p>コンテンツ</p>
-        </section>
-        <section>
-            <h2>セクション2</h2>
-            <p>追加コンテンツ</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 ホームページ作成テスト</p>
-    </footer>
+    <div class="container">
+        <aside id="sidebar">
+            <h3>Topics</h3>
+            <nav>
+                <ul>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#research">Research Interest</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#qualifications">Qualifications</a></li>
+                    <li><a href="#contact">Contact</a></li>            
+                </ul>
+            </nav>
+        </aside>
+        <div class="content">
+            <header>
+                <h1>Mikiya Doi(土井幹也)</h1>
+                <img src="img/home.jpg" width="300" height="200">
+            </header>
+            <main>
+                <h2 id="about">1. About me</h2>
+                    <ul>
+                        <li>土井幹也/ Doi Mikiya</li>
+                        <ul>
+                            <li>東北大学 大学院情報科学研究科 応用情報科学専攻 博士課程前期2年</li>
+                            <li><a href="https://altema.is.tohoku.ac.jp/">田中研究室・大関研究室 所属</a></li>
+                        </ul>
+                    </ul>
+                <h2 id="research">2. Research Interest</h2>
+                    <ul>
+                        <li>情報統計力学/Statistical Mechanics for Information Processing</li>
+                        <li>量子アニーリング/Quantum Annealing</li>
+                        <li>ベイズ最適化/Baysian Optimization</li>
+                    </ul>
+
+                <h2 id="education">3. Education</h2>
+                    <ul>
+                        <li>2014年4月 ~ 2017年3月 : 私立名古屋高等学校</li>
+                        <li>2018年4月 ~ 2022年3月 : 東北大学 工学部 電気情報物理工学科 電子コース</li>
+                        <li>2022年4月 ~ : 東北大学 大学院情報科学研究科 応用情報科学専攻</li>
+                    </ul>
+
+                <h2 id="publications">4. Publications</h2>
+                    to appear soon.
+
+                <h2 id="qualifications">5. Qualifications</h2>
+                    <ul>
+                        <li>2021年9月: 一般社団法人日本ディープラーニング協会 G検定</li>
+                        <li>2022年2月: 一般社団法人日本ディープラーニング協会 E資格</li>
+                        <li>2022年6月: 統計検定 準1級</li>
+                    </ul>
+                <h2 id="contact">6. Contact</h2>
+                    mikiya.doi.t2[at]dc.tohoku.ac.jp
+            </main>
+            <footer>
+                <p>&copy; Mikiya Doi's Home page last update in xxxxxx</p>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>

@@ -14,7 +14,7 @@
     width: 250px; /* サイドバーの幅 */
     background-color: #f2f2f2; /* サイドバーの背景色 */
     padding: 20px;
-    height: 140vh; /* ビューポートの高さに合わせる */
+    height: 110vh; /* ビューポートの高さに合わせる */
     overflow-y: auto;
     flex-shrink: 0; /* サイドバーが縮小しないようにする */
 }

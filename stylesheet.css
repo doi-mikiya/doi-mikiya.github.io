@@ -33,24 +33,6 @@ h1 {
     padding: 20px;
 }
 
-/* 以下、既存のスタイルを追加・調整 */
-
-/* レスポンシブデザインのためのメディアクエリ */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* 画面が小さくなったら縦並びに変更 */
-    }
-
-    #sidebar {
-        width: 100%; /* サイドバーの幅を画面幅いっぱいにする */
-        height: auto; /* 高さを自動調整にする */
-    }
-
-    .content {
-        flex-grow: 0; /* メインコンテンツの成長を無効にする */
-    }
-}
-
 footer {
     background-color: #f3f3f3;
     color: #333;

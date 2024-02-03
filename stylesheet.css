@@ -1,40 +1,49 @@
-/* 全体のボックスサイジングを設定 */
-*, *:before, *:after {
-    box-sizing: border-box;
+html, body {
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
 }
 
-/* コンテナをフレックスボックスにする */
 .container {
     display: flex;
-        flex-wrap: nowrap; /* フレックスアイテムが折り返さないようにする */
+    flex-direction: row; 
+    min-height: 100vh; 
+    flex-wrap: wrap;
 }
 
-/* サイドバーのスタイリング */
 #sidebar {
-    width: 250px; /* サイドバーの幅 */
-    background-color: #f2f2f2; /* サイドバーの背景色 */
+    width: 250px;
+    background-color: #f2f2f2;
     padding: 20px;
-    height: 120vh; /* ビューポートの高さに合わせる */
-    overflow-y: auto;
-    flex-shrink: 0; /* サイドバーが縮小しないようにする */
+    flex-shrink: 0; 
 }
 
-header {
-    display: flex; /* フレックスボックスを有効化 */
-    align-items: center; /* アイテムを垂直方向の中央に配置 */
-}
-h1 {
-    margin-right: 400px; /* h1の右に余白を追加 */
-}
-
-/* メインコンテンツのスタイリング */
 .content {
-    flex-grow: 1; /* 残りのスペースをメインコンテンツが取るようにする */
+    flex-grow: 1;
     padding: 20px;
 }
 
 footer {
     background-color: #f3f3f3;
     color: #333;
-    font-weight:bold;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #sidebar, .content, header {
+        width: 100%; 
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column; 
+    }
 }
